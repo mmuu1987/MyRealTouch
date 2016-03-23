@@ -4,7 +4,6 @@ using XHFrameWork;
 
 public class FourUI3D : BaseThreeD
 {
-
     protected CameraControl cc
     {
         get
@@ -21,7 +20,6 @@ public class FourUI3D : BaseThreeD
         }
 
     }//相机控制组件
-
     public FourUI3D(int xPosition, BaseUI baseUI)
         : base(xPosition, baseUI)
     {
@@ -32,7 +30,6 @@ public class FourUI3D : BaseThreeD
                 
             });
     }
-
     protected override void StateChanged(object sender, EnumObjectState newState, EnumObjectState oldState)
     {
         base.StateChanged(sender, newState, oldState);
@@ -62,7 +59,6 @@ public class FourUI3D : BaseThreeD
             }
         }
     }
-
     protected override void SendMessaget()
     {
         Message message = new Message(MessageType.Net_FoutUI3d_FoutUI, this);

@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-
 public class CameraControl : MonoBehaviour {
 
     public Transform target;
@@ -22,12 +19,12 @@ public class CameraControl : MonoBehaviour {
     private float x = 0.0f;
     private float y = 0.0f;
 
-    private Text ui;
+    
    
     private Vector3 CameraTarget;
     void Start()
     {
-        ui.transform.Find("");
+      
 
         //CameraTarget = target.position;
         //if (target != null) 
@@ -80,8 +77,6 @@ public class CameraControl : MonoBehaviour {
        // transform.position = Vector3.Slerp(this.transform.position, position, 0.09f);
 
         transform.LookAt(CameraTarget);
-
-        Debug.Log(transform.Find("Label_Level").name);
 
     }
 

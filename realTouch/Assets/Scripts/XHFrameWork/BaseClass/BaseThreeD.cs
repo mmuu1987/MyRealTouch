@@ -33,7 +33,6 @@ public abstract class BaseThreeD  {
         }
         get { return this.state; }
     }
-
     public BaseThreeD(int xPosition,BaseUI baseUI)//UI生成在屏幕的左边还是右边，左边为假，右边为真
     {
         if (baseUI.GetCameraType() == EnumCamera.CameraAbove)
@@ -47,7 +46,6 @@ public abstract class BaseThreeD  {
                 camera.name = "Camera" + baseUI.GetUIType().ToString();
 
                 camera.cullingMask = 1 << (10 + (int)baseUI.GetUIType());//加十是因为层就在对应的层加10
-
 
                 if (xPosition < 0)
                 {
@@ -91,7 +89,6 @@ public abstract class BaseThreeD  {
 
         CoroutineController.Instance.StartCoroutine(IsLoadOver());
     }
-
     public virtual void Destroy()
     {
         GameObject.Destroy(camera.gameObject);
